@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="stylesheet" href="CSS/all.css" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="CSS/main.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 m-auto">
+            <div class="row d-flex align-items-center vh-100">
+              <div class="row bg-white p-0 rounded-4 shadow">
+                <!--------------------- left ------------------------->
+
+                <div class="col-md-6 text-center px-0">
+                  <div id="signIn" class="bg-white d-block rounded-start-4 px-2 py-5">
+                    <h2 class="fw-bolder text-dark my-3">Sign In</h2>
+                    <div class="social-container my-3">
+                      <a href="#" class="social p-2 text-dark fs-6"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                      <a href="#" class="social p-2 text-dark fs-6"
+                        ><i class="fab fa-google"></i
+                      ></a>
+                      <a href="#" class="social p-2 text-dark fs-6"
+                        ><i class="fab fa-tiktok"></i
+                      ></a>
+                    </div>
+                    <span class="mt-2 d-block">or use your account</span>
+                    <input
+                    id="signInName"
+                      class="form-control my-3 bg-light"
+                      type="email"
+                      placeholder="Email"
+                    />
+                    <input
+                    id="signInPassword"
+                      class="form-control my-3 bg-light"
+                      type="password"
+                      placeholder="password"
+                    />
+                    <span class="fw-lighter text-danger d-none">Please make sure your email and password are correct</span>
+                    <span class="mt-2 d-block">Forgot your password?</span>
+                    <button
+                    onclick="logInToTheAccount()"
+                      class="btn btn-outline-dark px-5 py-2 rounded-5 my-3 fw-bold"
+                    >
+                      Sign In
+                    </button>
+                  </div>
+
+                  <div id="goToSignIn" class="d-none bg-dark h-100 d-flex align-items-center justify-content-center rounded-start-4">
+                    <div class="text-center">
+                      <h2 class="fw-bolder my-3 text-light d-block">Welcome Back!</h2>
+                    <span class="text-light d-block"
+                      >Please login with your personal info</span
+                    >
+                    <div onclick="goFromRegistrationToLogIn()" class="d-block">
+                      <button
+                      class="btn btn-outline-light px-5 py-2 rounded-5 my-3 fw-bold"
+                    >
+                      Sign In
+                    </button>
+                    </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!--------------------- right ------------------>
+
+                <div class="col-md-6 p-0">
+
+                  <div id="signUp" class="d-none ">
+                    <div class="bg-white start-0 rounded-end-4 p-2 ">
+                     <div class="my-5">
+                      <h2 class="fw-bolder text-dark my-4 text-center">Sign Up</h2>
+                      <div class="social-container my-3 text-center">
+                        <a href="#" class="social p-2 text-dark fs-6"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="#" class="social p-2 text-dark fs-6"
+                          ><i class="fab fa-google"></i
+                        ></a>
+                        <a href="#" class="social p-2 text-dark fs-6"
+                          ><i class="fab fa-tiktok"></i
+                        ></a>
+                      </div>
+                      <span class="mt-2 d-block text-dark text-center">or use your account</span>
+                      <input
+                      oninput="validateInputs(this)"
+                      id="signUpName"
+                        class="form-control my-3 bg-light"
+                        type="text"
+                        placeholder="Name"
+                      />
+                      <span class="fw-lighter text-danger d-none">Username must start with an uppercase letter and at least three lowercase letters.</span>
+                      <input
+                      oninput="validateInputs(this)"
+                      id="signUpEmail"
+                        class="form-control my-3 bg-light"
+                        type="email"
+                        placeholder="Email"
+                      />
+                      <span class="fw-lighter text-danger d-none">The email should be like this: xxxx@xxx.com</span>
+                      <input
+                      oninput="validateInputs(this)"
+                      id="signUpPassword"
+                        class="form-control my-3 bg-light"
+                        type="password"
+                        placeholder="password"
+                      />
+                      <div class="text-center">
+                        <button
+                        onclick="addsers()"
+                        class="btn btn-outline-dark px-5 py-2 rounded-5 my-3 fw-bold"
+                      >
+                        Sign Up
+                      </button>
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+
+
+                  <div id="goToSignUp" class="bg-dark h-100 d-flex align-items-center rounded-end-4 p-3 d-block " >
+                    <div class="text-center">
+                      <h2 class="fw-bolder my-3 text-light">Hello, Friend!</h2>
+                      <span class="text-light d-block">Enter your personal details and start your journey with us</span >
+                      <button onclick="goFromLoginToRegister()" class="btn btn-outline-light px-5 py-2 rounded-5 my-3 fw-bold"> Sign Up </button>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="JS/index.js"></script>
+  </body>
+</html>
